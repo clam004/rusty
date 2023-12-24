@@ -10,6 +10,7 @@
 /rustversion
 
 # Remove Cargo.lock from gitignore if creating an executable, leave it for libraries
+# Because the Cargo.lock file is important for reproducible builds, it’s often checked into source control with the rest of the code in your project.
 # More information here https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
 Cargo.lock
 

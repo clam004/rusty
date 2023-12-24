@@ -9,3 +9,8 @@ $ cargo run
      Running `target/debug/guessing_game`
 Hello, world!
 ```
+
+to update the crates, aka dependencies, in Cargo.toml
+```
+cargo update
+```
