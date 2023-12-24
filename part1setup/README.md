@@ -117,7 +117,7 @@ cargo run --release
 ```
 
 To use Rust in a Jupyter Notebook
-Install the EvCxR Jupyter Kernel
+Install the [EvCxR Jupyter Kernel](https://github.com/evcxr/evcxr/blob/main/evcxr_jupyter/samples/evcxr_jupyter_tour.ipynb)
 
 ```
 $ python3 -m venv venv
