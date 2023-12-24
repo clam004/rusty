@@ -18,3 +18,24 @@ Cargo.lock
 
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# large files
+**/data/
+**/modelstate/
+
+# Environments
+env*
+env/
+.env
+.venv
+venv/
+venv3/
+ENV/
+env.bak/
+venv.bak/
+
+# Apple
+.DS_Store
