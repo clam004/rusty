@@ -68,3 +68,52 @@ $ rustc main.rs
 $ ./main
 Hello, world!
 ```
+
+Cargo
+```
+part1setup $ cargo new hello_cargo 
+```
+
+```
+├── part1setup
+│   ├── helloworld
+│   │   └── main.rs
+│   └── hello_cargo
+│       ├── Cargo.toml
+│       └── src
+│           └── main.rs
+
+```
+
+```
+part1setup $ cargo build
+   Compiling hello_cargo v0.1.0 (/Users/part1setup/hello_cargo)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.72s
+part1setup $ ./target/debug/hello_cargo
+Hello, world!
+```
+this is equivalent to 
+```
+part1setup $ cargo run
+    Finished dev [unoptimized + debuginfo] target(s) in 0.02s
+    Running `target/debug/hello_cargo`
+Hello, world!
+```
+
+```
+cargo check
+```
+
+Building for Release
+```
+cargo build --release
+./target/release/hello_cargo
+Hello, world!
+```
+
+this is equivalent to 
+```
+cargo run --release
+```
+
+
