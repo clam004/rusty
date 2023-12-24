@@ -14,3 +14,8 @@ to update the crates, aka dependencies, in Cargo.toml
 ```
 cargo update
 ```
+
+to see docs for your dependencies, from the same level as the `Cargo.toml``
+```
+cargo doc --open
+```
