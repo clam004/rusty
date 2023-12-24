@@ -116,4 +116,19 @@ this is equivalent to
 cargo run --release
 ```
 
+To use Rust in a Jupyter Notebook
+Install the EvCxR Jupyter Kernel
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip install jupyter
+(venv) $ cargo install evcxr_jupyter
+(venv) $ evcxr_jupyter --install
+(venv) $ jupyter lab
+```
+After run the `jupyter lab` command you should see the tab below added to your browser:
+<img src="https://datacrayon.com/assets/images/520468c29709badd52ffbfa30716d5f6.png">
+
+
+
 
