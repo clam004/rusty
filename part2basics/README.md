@@ -1,4 +1,7 @@
-
+```
+venv $ jupyter lab
+```
+-> Rust notebook
 
 ```
 $ cargo new guessing_game
