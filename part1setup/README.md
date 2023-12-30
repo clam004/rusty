@@ -126,6 +126,9 @@ $ source venv/bin/activate
 (venv) $ cargo install evcxr_jupyter
 (venv) $ evcxr_jupyter --install
 (venv) $ jupyter lab
+[I 2023-12-30 08:03:41.060 ServerApp] jupyter_lsp | extension was successfully linked.
+(venv) $ deactivate
+$
 ```
 
 After run the `jupyter lab` command you should see the tab below added to your browser:
