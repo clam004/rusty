@@ -72,6 +72,7 @@ Hello, world!
 Cargo
 ```
 part1setup $ cargo new hello_cargo 
+part1setup $ cd hello_cargo
 ```
 
 ```
@@ -86,7 +87,7 @@ part1setup $ cargo new hello_cargo
 ```
 
 ```
-part1setup $ cargo build
+part1setup/hello_cargo $ cargo build
    Compiling hello_cargo v0.1.0 (/Users/part1setup/hello_cargo)
     Finished dev [unoptimized + debuginfo] target(s) in 0.72s
 part1setup $ ./target/debug/hello_cargo
