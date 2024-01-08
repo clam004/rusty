@@ -1,3 +1,7 @@
+# Basic Programming in Rust
+
+these lessons are within notebooks, to open notebooks:
+
 ```
 venv $ jupyter lab
 ```
@@ -39,3 +43,7 @@ to see docs for your dependencies, from the same level as the `Cargo.toml``
 ```
 cargo doc --open
 ```
+
+## Common Collections
+
+collections data are stored on the heap
