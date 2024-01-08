@@ -183,6 +183,25 @@ sup
 
 #### To build and run layout 4 above
 
+we are going to setup this directory structure:
+
+```
+./
+ |_Cargo.toml
+ |_target/
+ |_src/
+    |_bin/
+    |   |_my_executable.rs
+    |_module_abc/
+    |   |_mod.rs
+    |   |_module_a.rs
+    |   |_module_b.rs
+    |   |_module_c.rs
+    |_ lib.rs
+```
+
+by 
+
 ```
 $ mkdir layout4
 $ cd layout4
@@ -202,17 +221,18 @@ $ ls
 Cargo.lock      Cargo.toml      src             target
 ```
 
-inside we are going to setup this directory structure:
+#### layout 5 is 
 
 ```
-./
- |_Cargo.toml
- |_target/
- |_src/
-    |_bin/
-    |   |_my_executable.rs
-    |_ lib.rs
+$ mkdir layout5
+$ cd layout5
+$ git clone https://github.com/clam004/rust-split-example.git
+$ cd rust-split-example
+$ git checkout 5c292b65c8fe61f17f55a673a5222d7bef8ff3f0
+$ cargo run
 ```
+
+
 
 
 
