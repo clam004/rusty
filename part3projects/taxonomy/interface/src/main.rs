@@ -1,3 +1,4 @@
+// interface/src/main.rs
 mod hello_speaker {
     pub fn greet() {
         println!("hello world");

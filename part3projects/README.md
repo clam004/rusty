@@ -18,6 +18,8 @@ collectively referred to as the module system are a number of features that allo
 3. Modules and use: Let you control the organization, scope, and privacy of paths
 4. Paths: A way of naming an item, such as a struct, function, or module
 
+
+
 ### Crates
 
 A crate is the smallest amount of code that the Rust compiler considers at a time, there are 2 forms of crates:
@@ -67,7 +69,17 @@ edition = "2021"
 
  ### Example
 
- https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee 
+ This tutorial  https://dev.to/ghost/rust-project-structure-example-step-by-step-3ee  shows you the step by step evolution of how your functions/structs/etc can be laid out: 
+
+ 1. into a separate modules `mod` in the same `main.rs`` file
+ 2. into other files at the same level as `main.rs`
+ 3. into a folder at the same level as `main.rs`
+ 4. into `src/lib.rs` where src is at the smae level as `Cargo.toml` and there is no `main.rs` because `fn main() {` is in a file within `src/bin`
+  - https://github.com/clam004/rust-split-example/commit/64efc45d1e3b3a42d69d2169ee8af6877a278850
+ 5. into a different crate. `main.rs` and `lib.rs` are in two separate folders with their own `Cargo.toml`. The `Cargo.toml` with a `src/main.rs` has under `[dependencies]` `de_lib = { path = "../de_lib" }`
+  - https://github.com/clam004/rust-split-example
+
+#### To build and run layouts 1 - 3 above: 
 
 ```
 part3projects $ mkdir taxonomy
@@ -95,7 +107,9 @@ fn main() {
     println!("Hello, world!");
 }
 ```
+
 to 
+
 ```rust
 // interface/src/main.rs
 mod hello_speaker {
@@ -108,7 +122,9 @@ fn main() {
     crate::hello_speaker::greet();
 }
 ```
+
 or 
+
 ```rust
 // interface/src/main.rs
 mod hello_speaker {
@@ -123,7 +139,9 @@ fn main() {
     greet();
 }
 ```
+
 to check your changes
+
 ```
 interface $ cargo run
    Compiling interface v0.1.0 (/Users/part3projects/taxonomy/interface)
@@ -131,7 +149,9 @@ interface $ cargo run
      Running `target/debug/interface`
 hello world
 ```
+
 in a file `sup.rs` at the same level as `main.rs` 
+
 ```
 ./
  |_Cargo.toml
@@ -140,14 +160,18 @@ in a file `sup.rs` at the same level as `main.rs`
     |_ main.rs
     |_ sup.rs
 ```
-write in `interface/src/sup.rs`
+
+write in `interface/src/sup.rs`:
+
 ```rust
 // interface/src/sup.rs
 pub fn say_sup() {
     println!("sup");
 }
 ```
-test
+
+test your changes:
+
 ```
 cargo run
    Compiling interface v0.1.0 (/Users//interface)
@@ -156,6 +180,7 @@ cargo run
 hello world
 sup
 ```
+#### To build and run layout 4 above
 
 
 
