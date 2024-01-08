@@ -82,22 +82,22 @@ edition = "2021"
 #### To build and run layouts 1 - 3 above: 
 
 ```
-part3projects $ mkdir taxonomy
-part3projects $ cd taxonomy
-part3projects/taxonomy $ cargo new interface
-part3projects/taxonomy $ cd interface
-part3projects/taxonomy/interface $ ls
+part3projects $ mkdir layout123
+part3projects $ cd layout123
+part3projects/layout123 $ cargo new interface
+part3projects/layout123 $ cd interface
+part3projects/layout123/interface $ ls
 Cargo.toml      src
-part3projects/taxonomy/interface $ cargo build
+part3projects/layout123/interface $ cargo build
    Compiling interface v0.1.0 (/Users/part3projects/taxonomy/interface)
     Finished dev [unoptimized + debuginfo] target(s) in 0.47s
-part3projects/taxonomy/interface $ ls
+part3projects/layout123/interface $ ls
 Cargo.lock      Cargo.toml      src             target
-part3projects/taxonomy/interface $ cargo run
+part3projects/layout123/interface $ cargo run
     Finished dev [unoptimized + debuginfo] target(s) in 0.02s
      Running `target/debug/interface`
 Hello, world!
-part3projects/taxonomy/interface $ 
+part3projects/layout123/interface $ 
 ```
 
 change `interface/src/main.rs` from 
@@ -180,8 +180,39 @@ cargo run
 hello world
 sup
 ```
+
 #### To build and run layout 4 above
 
+```
+$ mkdir layout4
+$ cd layout4
+$ git clone https://github.com/clam004/rust-split-example.git
+$ cd rust-split-example
+$ git checkout 64efc45d1e3b3a42d69d2169ee8af6877a278850
+$ ls
+-> Cargo.lock      Cargo.toml      src
+$ cargo run
+   Compiling desintegration_example v0.1.0 (/Users/layout4/rust-split-example)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.91s
+     Running `target/debug/my_executable`
+first one: 2, -1 = -2
+second one: 4, -2 = -8
+third one: 8, -4 = -32
+$ ls
+Cargo.lock      Cargo.toml      src             target
+```
+
+inside we are going to setup this directory structure:
+
+```
+./
+ |_Cargo.toml
+ |_target/
+ |_src/
+    |_bin/
+    |   |_my_executable.rs
+    |_ lib.rs
+```
 
 
 
