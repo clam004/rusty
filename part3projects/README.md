@@ -230,6 +230,13 @@ $ git clone https://github.com/clam004/rust-split-example.git
 $ cd rust-split-example
 $ git checkout 5c292b65c8fe61f17f55a673a5222d7bef8ff3f0
 $ cargo run
+   Compiling de_lib v0.1.0 (/Users/layout5/rust-split-example/de_lib)
+   Compiling de_cli v0.1.0 (/Users/layout5/rust-split-example/de_cli)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.87s
+     Running `target/debug/de_cli`
+first one: 2, -1 = -2
+second one: 4, -2 = -8
+third one: 8, -4 = -32
 ```
 
 
